@@ -29,6 +29,7 @@
 \newcommand{\x}{\times}
 \newcommand{\set}[1]{\left\{#1\right\}}
 \newcommand{\inv}[1]{{#1}^{-1}}
+\newcommand{\es}{\text{\O}}
 
 
 
@@ -75,7 +76,7 @@
                     \item A commutative ring that has exactly one maximal ideal and is not a field.
                     \item A non-commutative ring with exactly two maximal ideals.
                 \end{enumerate}
-            phhhhhhhhhh
+            
             %#2
             \item 
                 \begin{enumerate}
@@ -331,6 +332,12 @@
             %#43
             \item Let $R$ be a commutative ring with $1$ and $P$ a prime ideal of $R$. Show that if $I$ and $J$ are ideals of $R$ such that $I\cap J \subseteq P$ and $J\nsubseteq P$, then $I\subseteq P$.
             
+            \begin{proof}
+                Suppose that $I$ and $J$ are ideals of $R$ such that $I \cap J \subseteq R$ but $J nsubseteq P$. Then there is some element $x\in J$ such that $x\notin P$. 
+                
+                Let $y\in I$, then $xy\in I$ and $xy\in J$. Thus $xy\in P$. Since $P$ is prime, we must have $x\in P$ or $y\in P$. We know that $x\notin P$ so it must be the case that $y\in P$. Since $y\in I$ was arbitrary, it follows that $I\subseteq R$. 
+            \end{proof}
+            
             %#44
             \item Let $M_1 \neq M_2$ be two maximal ideals in the commutative ring $R$ and let $I=M_1\cap M_2$. Prove that $R/I$ is isomorphic to the direct sum of two fields. 
             
@@ -338,6 +345,10 @@
 
             \item Let $R$ be a non-zero commutative ring with $1$. Show that if $I$ is an ideal of $R$ such that $1+a$ is a unit in $R$ for all $a\in I$, then $I$ is contained in every maximal ideal of $R$.
             
+            \begin{proof}
+                Let $I$ be an ideal of $R$ such that $1+a$ is a unit in $R$ for all $a\in I$. If $a\in I$ the we know that $-a\in I$. Thus $1-a$ is a unit in $R$ for all $a\in I$. It follows that every element of $I$ is quasiregular. It is known that the Jacobson Radical, $J(R)$, is maximal with respect to every element being quasiregular. Thus $I\subseteq J(R) \subseteq \bigcap_{\set{M\mid M \text{ is maximal in } R}}M$, as desired.
+            \end{proof}
+
             %#46
             \item Let $R$ be a commutative ring with identity. Suppose $R$ contains an idempotent element $a$ other that $0$ or $1$. Show that every prime ideal of $R$ contains an idempotent element other that $0$ or $1$. (An element $a\in R$ is idempotent if $a^2=a$)
             
@@ -345,10 +356,14 @@
             \item Let $R$ be a commutative ring with $1$.
                 
                 \begin{enumerate}
-                    \item Prove that $(x)$ is a prime ideal in $R[x]$ if and only id $R$ is an integral domain.
+                    \item Prove that $(x)$ is a prime ideal in $R[x]$ if and only if $R$ is an integral domain.
                     \item Prove that $(x)$ is a maximal ideal in $R[x]$ if and only if $R$ is a field.
                 \end{enumerate}
             
+            \begin{proof}
+                Note that $(x)$ is an ideal of $R[x]$ and $R[x]/(x) \equiv R$. Then (a) and (b) follow trivially.
+            \end{proof}
+
             %#48
             \item Find all values of $a$ in $\Z_3$ such that the quotient ring \[\Z_3[x]/(x^3+x^2+ax+1)\] is a field. Justify your answer.
             
@@ -357,13 +372,26 @@
             
             %#50
             \item Let $R$ be a commutative ring with identity and let $U$ be maximal among non-finitely generalted ideals of $R$. Prove $U$ is a prime ideal.
-            
+        
+
             %#51
             \item Let $R$ be a commutative ring with identity and let $U$ be a maximal among non-principal ideals of $R$. Prove $U$ is a prime ideal. 
             
+            \begin{proof}
+                Let $U\subseteq R$ be maximal among non-principal ideals. Suppose $U$ is not prime. Then there exists $a,b\in R\setminus U$ such that their product $ab\in U$. Then we have that $U\subsetneq U+(a)$. Since $U$ is properly contained in $U+(a)$, then $U+(a)$ is principal. So $U+(a)=(c)$ for some $c\in R$. 
+
+                Now define the set $V=\set{x\in R \mid cx\in U}$. Clearly we have $U\subseteq V$. Also we can say $u+ra=c$ for some $u\in U$ and $r\in R$. Then $b(u+ra)=bu+r(ab)=bc$. So it follows that $bc\in U$ since $bu\in U$ and $r(ab)\in U$. Thus $b\in V$ and we can conlude that $U\subsetneq V$. Now we can say that $V=(d)$ for some $d\in R$. 
+
+                Let $u\in U$. Then $u=cy$ for some $y\in R$. Then $y\in V$. So we can say that $y=dz$ for some $z\in R$. Thus $u=c(dz)$ and so $u\in (cd)$. Hence $U\subseteq (cd)$. Also since $d\in V$ then $cd\in U$ and so $(cd)\subseteq U$. But then we have $U=(cd)$, a contradiction and so $U$ is a prime ideal. 
+            \end{proof}
+
             %#52
-            \item Let $R$ be a non-zero commutative ring with $1$ and $S$ a multiplicative sibset of $R$ not containing $0$. Show that if $P$ is maximal in the set of ideals of $R$ not intersecting $S$, then $P$ is a prime ideal.
+            \item Let $R$ be a non-zero commutative ring with $1$ and $S$ a multiplicative subset of $R$ not containing $0$. Show that if $P$ is maximal in the set of ideals of $R$ not intersecting $S$, then $P$ is a prime ideal.
             
+            \begin{proof}
+                Let $S$ be a multiplicative set not containing $0$. Let $P\subseteq R\setminus S$ be maximal. Suppose that $P$ is not a prime ideal. Then there exists elements $a,b\in R\setminus P$ such that $ab\in P$. Then $P+(a)\cap S \neq \es$ and $P+(b)\cap S \neq \es$. So there exists elements $p,q\in P$ and $s,t\in R$ such that $p+as\in S$ and $q+bt\in S$. Thus we can say that $(p+as)(q+bt)=(pq)+as(q)+(p)bt+(ab)st\in P\cap S=\es $, a contradiction.
+            \end{proof}
+
             %#53
             \item Let $R$ be a non-zero commutative ring with $1$. 
                 
@@ -372,6 +400,19 @@
                     \item Show that the set of nilpotent elements of $R$ is the intersection of all prime ideals.
                 \end{enumerate}
             
+            \begin{proof}
+                For (a), let $S$ be a multiplicative set not containing $0$. Let $P\subseteq R\setminus S$ be maximal. Suppose that $P$ is not a prime ideal. Then there exists elements $a,b\in R\setminus P$ such that $ab\in P$. Then $P+(a)\cap S \neq \es$ and $P+(b)\cap S \neq \es$. So there exists elements $p,q\in P$ and $s,t\in R$ such that $p+as\in S$ and $q+bt\in S$. Thus we can say that $(p+as)(q+bt)=(pq)+as(q)+(p)bt+(ab)st\in P\cap S=\es $, a contradiction.
+
+                For (b), let $r\in R$ be nilpotent. Then $r^n=0$ for some $n\in \N$. Since $r^n=0\in P$ for all prime ideals $P\subseteq R$, then $r\in P$ for all prime ideals. Therefore $r\in \bigcap_{\set{P\mid P\subseteq R \text{ is a prime ideal}}}P$.
+
+                Now suppose $r\in \bigcap_{\set{P\mid P\subseteq R \text{ is a prime ideal}}} P$. Suppose $r$ is not nilpotent. 
+                
+                Then we can define $\mathcal{R}=\set{r^n\mid n\in \N}$. Now define $\mathcal{M}=\set{I\subseteq R\setminus \mathcal{R}\mid I \text{ is an ideal of } R}$. Now let $\mathcal{C}$ be a chain of ideals of $\mathcal{M}$. Then note that $U=\bigcup_{\set{U_c\in \mathcal{C}}}U_c$ is an ideal, an upper bound for $\mathcal{C}$ and $U\cap \mathcal{R}=\es$ since $U_c\cap \mathcal{R}=\es$ for all $U_c\in \mathcal{C}$. Thus $U\in \mathcal{M}$ and by Zorn's lemma $\mathcal{M}$ has a maximal element say $M$. 
+                
+                Now we want to show that $M$ is a prime ideal and arrive at a contradiction. Suppose $a,b\in R\setminus M$. Then $M\subsetneq M+(a)$ and $M\subsetneq M+(b)$. So $M+(a)\notin \mathcal{M}$ and $M+(b)\notin \mathcal{M}$. So there exists $m,n\in \N$ such that $r^n\in M+(a)$ and $r^m\in M+(b)$. Then $r^{m+n}\in M+(ab)\notin \mathcal{M}$. Therefore $ab\notin M$ and so $M$ is prime, a contradiction to $r$ being contained in all prime ideals of $R$. 
+
+            \end{proof}
+
             %#54
             \item Let $R$ be a commutative ring with identity and let $x\in R$ be a non-nilpotent element. Prove that there exists a prime ideal $P$ of $R$ such that $x\notin P$.
             
