@@ -57,72 +57,114 @@
 
             %#1
             \item Give an example of each of the following
+                
+            \begin{enumerate}
+                \item An irreducible polynomial of degree 3 in $\mathbb{Z}_3[x]$
+                \item A polynomial in $\mathbb{Z}[x]$ that is not irreducible in $\mathbb{Z}[x]$ but is irreducible in $\mathbb{Q}[x]$
+                \item A non-commutative ring of characteristic $p$, $p$ a prime 
+                \item A ring with exactly 6 inverible elements
+                \item An infinite non-commutative ring with only finitely many ideals.
+                \item An infinite non-commutative ring with non-zero characteristic.
+                \item An integral domain which is not a unique factorization domain. 
+                \item A unique factorization domain that is not a principal ideal domain
+                \item A principal ideal domain that is not a Euclidean domain.
+                \item A Euclidean domain other than the ring of integers of a field.
+                \item A finite non-commutative ring.
+                \item A commutative ring with a sequence $\{P_n\}_{n=1}^{\infty}$ of prime ideals such that $P_n$ is properly contained in $P_{n+1}$ for all $n$.
+                \item A non-zero prime ideal of a commutative ring that is not a maximal ideal.
+                \item An irreducible element of a commutative ring that is not a prime element. 
+                \item An irreducible element of an integral domain that is not a prime element. 
+                \item A commutative ring that has exactly one maximal ideal and is not a field.
+                \item A non-commutative ring with exactly two maximal ideals.
+            \end{enumerate}
+
+            \begin{proof}
                 \begin{enumerate}
-                    \item An irreducible polynomial of degree 3 in $\mathbb{Z}_3[x]$
-                    \item A polynomial in $\mathbb{Z}[x]$ that is not irreducible in $\mathbb{Z}[x]$ but is irreducible in $\mathbb{Q}[x]$
-                    \item A non-commutative ring of characteristic $p$, $p$ a prime 
-                    \item A ring with exactly 6 inverible elements
-                    \item An infinite non-commutative ring with only finitely many ideals.
-                    \item An infinite non-commutative ring with non-zero characteristic.
-                    \item An integral domain which is not a unique factorization domain. 
-                    \item A unique factorization domain that is not a principal ideal domain
-                    \item A principal ideal domain that is not a Euclidean domain.
-                    \item A Euclidean domain other than the ring of integers of a field.
-                    \item A finite non-commutative ring.
-                    \item A commutative ring with a sequence $\{P_n\}_{n=1}^{\infty}$ of prime ideals such that $P_n$ is properly contained in $P_{n+1}$ for all $n$.
-                    \item A non-zero prime ideal of a commutative ring that is not a maximal ideal.
-                    \item An irreducible element of a commutative ring that is not a prime element. 
-                    \item An irreducible element of an integral domain that is not a prime element. 
-                    \item A commutative ring that has exactly one maximal ideal and is not a field.
-                    \item A non-commutative ring with exactly two maximal ideals.
+                    \item $x^4+x^2+1-1$
+                    \item $2x+4$
+                    \item $M_n(\Z_p)$
+                    \item $\Z_7$
+                    \item $GL_n(R)$
+                    \item $M_n(F)$ where $F$ is the field of fractions of $\Z_p[x]$
+                    \item $\set{a+b\sqrt{5}\mid a,b\in \Z}$
+                    \item $\Z[x]$
+                    \item $\Z\left[\frac{1}{2}(1+\sqrt(-19))\right]$ or $\Q[\sqrt{-19}]$
+                    \item $\Z[i]$ is a Euclidean domain with norm $N(a+bi)=a^2+b^2$. Also $F[x]$ where $F$ is a field.
+                    \item $M_n(\Z_2)$
+                    \item Consider $\Z[x]$ and $P_0=(1)$, $P_1=(1,x)$, $\hdots$ , $P_n=(1,x,x^2,\hdots, x^n)$.
+                    \item $(x)\subseteq \Z[x]$
+                    \item Consider $\mathcal{R}\subseteq \R[x]$ consisting of polynomials with whose constant term is in $\Q$. Then $\mathcal{R}$ is a subring and $x$ is irreducible is $\mathcal{R}$. Note that $x\mid (\sqrt{2}x)^2$ but $x \nmid \sqrt{2}x$ otherwise $\sqrt{2}\in \mathcal{R}$ which would be a contradiction since $\sqrt{2}\notin \Q$. Thus $x$ is not prime.
+                    \item Same as (n)
+                    \item $\Z_{p^2}$
+                    \item $M_n(F\x F)$ where $F$ is a field.
                 \end{enumerate}
+            \end{proof}
             
+
             %#2
             \item 
-                \begin{enumerate}
-                    \item How many units does the ring $\mathbb{Z}/60\mathbb{Z}$ have? Explain your answer.
-                    \item How many ideals does the ring $\mathbb{Z}/60\mathbb{Z}$ have? Explain your answer.
-                \end{enumerate}
-                \begin{proof}
-                    For (a), we can use the fact that $a$ is a unit if $\gcd(a,n)=1$. Thus \\ $\mid  U_{60} \mid =\mid \{1,7,11,13,17,19,23,29,31,37,41,43,47,53,57,59\}\mid =16$.
+                
+            \begin{enumerate}
+                \item How many units does the ring $\mathbb{Z}/60\mathbb{Z}$ have? Explain your answer.
+                \item How many ideals does the ring $\mathbb{Z}/60\mathbb{Z}$ have? Explain your answer.
+            \end{enumerate}
+            \begin{proof}
+                For (a), we can use the fact that $a$ is a unit if $\gcd(a,n)=1$. Thus \\ $\mid  U_{60} \mid =\mid \{1,7,11,13,17,19,23,29,31,37,41,43,47,53,57,59\}\mid =16$.
 
-                    For (b) use the fact that $\mathbb{Z}/d\mathbb{Z}$ is an ideal of $\mathbb{Z}/n\mathbb{Z}$ when $d\mid n$. So let $D=\{d\in \mathbb{Z}/60\mathbb{Z}:d\mid 60\}=\\ \{2^x\cdot 3^y\cdot 5^z:0\leq x\leq 2, 0\leq y \leq 1, 0 \leq z \leq 1\}$. Thus the number of ideals is equal to $\mid D\mid =3\cdot 2 \cdot 2=12$
-                \end{proof}
+                For (b) use the fact that $\mathbb{Z}/d\mathbb{Z}$ is an ideal of $\mathbb{Z}/n\mathbb{Z}$ when $d\mid n$. So let $D=\{d\in \mathbb{Z}/60\mathbb{Z}:d\mid 60\}=\\ \{2^x\cdot 3^y\cdot 5^z:0\leq x\leq 2, 0\leq y \leq 1, 0 \leq z \leq 1\}$. Thus the number of ideals is equal to $\mid D\mid =3\cdot 2 \cdot 2=12$
+            \end{proof}
 
             %#3
             \item How many ideals does the ring $\mathbb{Z}/90\mathbb{Z}$ have? Explain your answer.
-                \begin{proof}
-                    Use the fact that $\mathbb{Z}/d\mathbb{Z}$ is an ideal of $\mathbb{Z}/n\mathbb{Z}$ when $d\mid n$. Let $D=\{d\in \mathbb{Z}/90\mathbb{Z}:d\mid 90\}= \\ \{2^x \cdot 3^y \cdot 5^z: 0\leq x \leq 1, 0\leq y \leq 2, 0\leq z \leq 1\}$. Then the number of ideals is equal to $\mid D\mid =2\cdot 3 \cdot 2=12$.
-                \end{proof}
+                
+            \begin{proof}
+                Use the fact that $\mathbb{Z}/d\mathbb{Z}$ is an ideal of $\mathbb{Z}/n\mathbb{Z}$ when $d\mid n$. Let $D=\{d\in \mathbb{Z}/90\mathbb{Z}:d\mid 90\}= \\ \{2^x \cdot 3^y \cdot 5^z: 0\leq x \leq 1, 0\leq y \leq 2, 0\leq z \leq 1\}$. Then the number of ideals is equal to $\mid D\mid =2\cdot 3 \cdot 2=12$.
+            \end{proof}
 
             %#4
             \item Denote the set of inverible elements of the ring $\mathbb{Z}_n$ by $U_n$.
-                \begin{enumerate}
-                    \item List all the elements of $U_{18}$.
-                    \item Is $U_{18}$ a cyclic group under multiplication? Justify your answer.
-                \end{enumerate}
                 
-                \begin{proof}
-                    Use the fact that $a$ is a unit if $\gcd(a,18)=1$. So the invertible elements of $\mathbb{Z}_{18}$ are $U_{18}=\{1,5,7,11,13,17\}$. Note that $\langle 5 \rangle = \{5,7,17,13,11,1\}=U_{18}$. Therefore $U_{18}$ is cyclic.
-                \end{proof}
+            \begin{enumerate}
+                \item List all the elements of $U_{18}$.
+                \item Is $U_{18}$ a cyclic group under multiplication? Justify your answer.
+            \end{enumerate}
+                
+            \begin{proof}
+                Use the fact that $a$ is a unit if $\gcd(a,18)=1$. So the invertible elements of $\mathbb{Z}_{18}$ are $U_{18}=\{1,5,7,11,13,17\}$. Note that $\langle 5 \rangle = \{5,7,17,13,11,1\}=U_{18}$. Therefore $U_{18}$ is cyclic.
+            \end{proof}
 
             %#5
             \item Denote the set of inverible elements of the ring $\mathbb{Z}_n$ by $U_n$.
-                \begin{enumerate}
-                    \item List all the elements of $U_{24}$.
-                    \item Is $U_{24}$ a cyclic group under multiplication? Justify your answer.
-                \end{enumerate}
+                
+            \begin{enumerate}
+                \item List all the elements of $U_{24}$.
+                \item Is $U_{24}$ a cyclic group under multiplication? Justify your answer.
+            \end{enumerate}
 
-                \begin{proof}
-                    Use the fact that $a$ is a unit if $\gcd(a,24)=1$. So the invertible elements of $\mathbb{Z}_{18}$ are $U_{24}=\{1,5,7,11,13,17,19,23\}$. Note that $x^2=1$ for all $x\in U_{24}$. Therefore $U_{24}$ is not cyclic.
-                \end{proof}
+            \begin{proof}
+                Use the fact that $a$ is a unit if $\gcd(a,24)=1$. So the invertible elements of $\mathbb{Z}_{18}$ are $U_{24}=\{1,5,7,11,13,17,19,23\}$. Note that $x^2=1$ for all $x\in U_{24}$. Therefore $U_{24}$ is not cyclic.
+            \end{proof}
 
             %#6
             \item Find all positive integers $n$ having the property that the group of units of $\mathbb{Z}/n\mathbb{Z}$ is an elementary abelian 2-group.
             
+            \begin{proof}
+                It is well known that the units of $A\x B$ are $U(A)\x U(B)$, and a product is an elementary abelian 2-group if and only if each factor is an elementary abelian 2-group. So by the Chinese Remainder Theorem, we can reduce the problem to the case where $n$ is a prime power.
+
+                If $p$ is odd, then $U(Z_{p^m})$ is cyclic of order $p^{m-1}(p-1)$. For this to be an abelian 2-group, we must have $p=3$ and $m=1$ since the only cyclic abelian 2-group is $Z_2$. 
+
+                If $p=2$, then $U(\Z_{2^m})$ is trivial if $m=1$, cyclic of order $2$ if $m=2$, and isomorphic to $\Z_2\x \Z_{2^m-1}$ if $m\geq 3$. But $\Z_2\x \Z_{2^m-1}$ is an elementary abelian 2-group if and only if $m\leq3$.
+                
+                Therefore we can conclude that $n=2^a3^b$ for $0\leq a \leq 3$ and $0\leq b \leq 1$.
+            \end{proof}
+
             %#7
             \item Let $U(R)$ denote the group of units of a ring R. Prove that if $m$ divides $n$, then the natural ring homomorphism $\mathbb{Z}_n\to\mathbb{Z}_m$ maps $U(\mathbb{Z}_n)$ onto $U(\mathbb{Z}_m)$. Give an example that shows that $U(R)$ does not have to map onto $U(S)$ under a surjective ring homomorphism $R\to S$.
             
+            \begin{proof}
+                
+            \end{proof}
+
             %#8
             \item If $p$ is a prime satisfying $p\equiv 1(\text{mod } 4)$, then $p$ is a sum of two squares.
             
@@ -132,35 +174,40 @@
             %#10
             \item Let $R_1$ and $R_2$ be commutative rings with identities and let $R=R_1\times R_2$. Show that every ideal $I$ of $R$ is of the form $I=I_1\times I_2$ with $I_i$ an ideal of $R_i$ for $i=1,2$.
             
-                \begin{proof}
-                    Let $I$ be an ideal fo $R=R_1\times R_2$. Define $I_1=\{r\in R_1:\exists s\in R_2 \text{ where } (r,s)\in I\}$ and $I_2=\{s\in R_2: \exists r \in R_1 \text{ where } (r,s)\in I\}$. 
+            \begin{proof}
+                Let $I$ be an ideal fo $R=R_1\times R_2$. Define $I_1=\{r\in R_1:\exists s\in R_2 \text{ where } (r,s)\in I\}$ and $I_2=\{s\in R_2: \exists r \in R_1 \text{ where } (r,s)\in I\}$. 
                     
-                    Note that if $r\in I_1$, then there exists $s\in R_2$ such that $(r,s)\in I$. Thus $(a,1_{R_2})(r,s)=(ar,s)\in I$, and so $ar\in I_1$. Thus $I_1$ is an ideal of $R_1$. By a similar argument, we can see that $I_2$ is an ideal of $R_2$. Now it is clear that $I\subseteq I_1\times I_2$. 
+                Note that if $r\in I_1$, then there exists $s\in R_2$ such that $(r,s)\in I$. Thus $(a,1_{R_2})(r,s)=(ar,s)\in I$, and so $ar\in I_1$. Thus $I_1$ is an ideal of $R_1$. By a similar argument, we can see that $I_2$ is an ideal of $R_2$. Now it is clear that $I\subseteq I_1\times I_2$. 
                     
-                    To show the reverse inclusion, suppose that $r\in I_1$, and $s\in I_2$ such that $(r,s)\in I_1\times I_2$. Since $r\in I_1$, then there is an $s'\in I_2$ such that $(r,s')\in I$. Also since $s\in I_2$, then there exists an $r'\in I_2$ such that $(r',s)\in I$. Now we see that $(1_R,s)(r,s')=(r,ss')\in I$, and $(1_R,s')(r',s)=(r',ss')\in I$. Thus $(r,ss')-(r',ss')+(r',s)=(r,s)\in I$. Therefore $I_1\times I_2\subseteq I$ so $I=I_1\times I_2$, as desired.
-                \end{proof}
+                To show the reverse inclusion, suppose that $r\in I_1$, and $s\in I_2$ such that $(r,s)\in I_1\times I_2$. Since $r\in I_1$, then there is an $s'\in I_2$ such that $(r,s')\in I$. Also since $s\in I_2$, then there exists an $r'\in I_2$ such that $(r',s)\in I$. Now we see that $(1_R,s)(r,s')=(r,ss')\in I$, and $(1_R,s')(r',s)=(r',ss')\in I$. Thus $(r,ss')-(r',ss')+(r',s)=(r,s)\in I$. Therefore $I_1\times I_2\subseteq I$ so $I=I_1\times I_2$, as desired.
+            \end{proof}
             %#11
             \item Show that a non-zero ring $R$ in which $x^2=x$ for all $x\in R$ is of characteristic 2 and is commutative.
-                \begin{proof}
-                    Let $x\in R$ and note that $x+x=(x+x)^2=x^2+x^2+x^2+x^2=x+x+x+x$. Thus $x+x=0$, so $R$ has characteristic zero. 
+                
+            \begin{proof}
+                Let $x\in R$ and note that $x+x=(x+x)^2=x^2+x^2+x^2+x^2=x+x+x+x$. Thus $x+x=0$, so $R$ has characteristic zero. 
 
-                    Now let $x,y\in R$. Then $x+y=(x+y)^2=x^2+xy+yx+y^2$. Rearranging terms gives $0=xy+yx$. Now $xy=xy+xy+yx=(xy+xy)+yx=0+yx=yx$. Thus we conclude that $R$ is commutative.
-                \end{proof}
+                Now let $x,y\in R$. Then $x+y=(x+y)^2=x^2+xy+yx+y^2$. Rearranging terms gives $0=xy+yx$. Now $xy=xy+xy+yx=(xy+xy)+yx=0+yx=yx$. Thus we conclude that $R$ is commutative.
+            \end{proof}
             
             %#12
             \item Let $R$ be a finite commutative ring with more than one element and no zero-divisors. Show that $R$ is a field.
             
-                \begin{proof}
-                    Define $\phi:R\to R$ by $\phi(r)=xr$ for all $r\in R$ and a fixed nonzero element $x\in R$. Suppose that for two elements $r,s\in R$, $\phi(r)=phi(s)$. Then we have $xr=xs$ or $xr-xs=0$ or $x(r-s)=0$. Since $x$ is nonzero and $R$ has no zero divisors, we see that $r-s=0$, and so $r=s$. Thus the map $\phi$ is injective. Since we are mapping from $R\to R$, then $\phi$ must also be surjective and thus bijective. 
-                    
-                    First we show that $R$ has an identity element. By the surjectivity of $\phi$ there must be an element $e\in R$ such that $x=\phi(e)=ex$. Now let $b\in R$. Then by the surjectivity of $\phi$ there is an element $y_b\in R$ such that $b=\phi(y_b)=y_bx$. Now we have $b=y_bx=y_bex=(y_bx)e=be$. Thus $e=1$ since it fixes every element in $R$. 
+            \begin{proof}
+                Define $\phi:R\to R$ by $\phi(r)=xr$ for all $r\in R$ and a fixed nonzero element $x\in R$. Suppose that for two elements $r,s\in R$, $\phi(r)=phi(s)$. Then we have $xr=xs$ or $xr-xs=0$ or $x(r-s)=0$. Since $x$ is nonzero and $R$ has no zero divisors, we see that $r-s=0$, and so $r=s$. Thus the map $\phi$ is injective. Since we are mapping from $R\to R$, then $\phi$ must also be surjective and thus bijective. 
+                
+                First we show that $R$ has an identity element. By the surjectivity of $\phi$ there must be an element $e\in R$ such that $x=\phi(e)=ex$. Now let $b\in R$. Then by the surjectivity of $\phi$ there is an element $y_b\in R$ such that $b=\phi(y_b)=y_bx$. Now we have $b=y_bx=y_bex=(y_bx)e=be$. Thus $e=1$ since it fixes every element in $R$. 
 
-                    Now again by the surjectivity of $\phi$, we must have some $r\in R$ such that $\phi(r)=rx=1$. Thus $x$ is a unit and since the choice of $x$ was arbitrary (except for the restriction of $x$ being nonzero), we conclude that $R$ must be a field.
-                \end{proof}
+                Now again by the surjectivity of $\phi$, we must have some $r\in R$ such that $\phi(r)=rx=1$. Thus $x$ is a unit and since the choice of $x$ was arbitrary (except for the restriction of $x$ being nonzero), we conclude that $R$ must be a field.
+            \end{proof}
 
             %#13
             \item Determine for which integers $n$ the ring $\mathbb{Z}/n\mathbb{Z}$ is a direct sum of fields. Prove your answer.
             
+            \begin{proof}
+                square-free
+            \end{proof}
+
             %#14
             \item Let $R$ be a subring of a field $F$ such that for each $x$ in $F$ either $x\in R$ or $x^{-1}\in R$. Prove that if $I$ and $J$ are ideals of $R$, then either $I\subseteq J$ or $J\subseteq I$.
             
@@ -184,6 +231,10 @@
             %#16
             \item Let $R$ be any ring with identity, and $n$ any positive integer. If $M_n(R)$ denotes the ring or $n\times n$ matrices with entries in $R$, prove that $M_n(I)$ is an ideal of $M_n(R)$ whenever $I$ is an ideal of $R$, and that every ideal of $M_n(R)$ has this form.
             
+            \begin{proof}
+                Look component-wise
+            \end{proof}
+
             %#17
             \item Let $m,n$ be positive integers such that $m$ divides $n$. Then the natural map $\phi:\mathbb{Z}_n \to \mathbb{Z}_m$ given by $a+(n) \mapsto a+(m)$ is a surjective ring homomorphism. If $U_n,U_m$ are the units of $\mathbb{Z}_n$ and $\mathbb{Z}_m$, respectively, show that $\phi:U_n\to U_m$ is a surjective group homomorphism.
             
@@ -209,8 +260,16 @@
             %#21
             \item Let $R$ be a commutative ring with identity and let $I_1, I_2, \dotsb , I_n$ be pairwise co-maximal ideals of $R$ (i.e, $I_i+I_j=R$ if $i\neq j$). Show that $I_i+\bigcap_{j\neq i} I_j=R$ for all $i$.
             
+            \begin{proof}
+                pick an element in $R$. Then it can be written as $i_1+i_2$ and $i_1+i_3$ and so on. So the result follows since the element is in $I_i+\bigcap_{j\neq i}$.
+            \end{proof}
+
             %#22
             \item Let $R$ be a commutative ring, not necessarily with identity, and assume there is some fixed positive integer $n$ such that $nr=0$ for all $r\in R$. Prove that $R$ embeds in a ring $S$ with identity so that $R$ is an ideal of $S$ and $S/R\cong \Z/n\Z$.
+            
+            \begin{proof}
+                Use $\Z\x R$ or $\Z_n\x R$ to embed $R$ into a ring with unity.
+            \end{proof}
             
             %#23 
             \item Let $R$ be a ring with identity $1$ and $a,b\in R$ such that $ab=1$. Denote $X=\{x\in R\mid  ax=1\}$. Show the following.
@@ -221,15 +280,31 @@
                 \item If $X$ has more than one element, then $X$ is an infinite set.
             \end{enumerate}
 
+            \begin{proof}
+                \begin{enumerate}
+                    \item multiply on the left by $a$
+                    \item $-x_1a=-x_2a \longrightarrow -x_1ab=-x_2ab \longrightarrow x_1=x_2$
+                    \item Suppose that $X$ is finite. Then $\phi$ is a bijection. So there exists some $x$ such that $b=b+1-xa \longrightarrow xa=1$. Then $x=xab=b$. Now take the other element in the set say $y\neq x$. Then $x=xay=y$. Which is a contradiction.
+                \end{enumerate}
+            \end{proof}
+
             %#24
             \item Let $R$ be a commutative ring with identity and define $U_2(R)=\left\{\begin{bmatrix} a&b\\0&c \end{bmatrix} \mid  a,b,c\in R \right\}$. Prove that every $R$-automorphism of $U_2(R)$ is inner.
             
             %#25
             \item Let $\R$ be the field of real numbers and let $F$ be the set of all $2\times 2$ matrices of the form $\mat{a & b\\-3b&a}$, where $a,b\in \R$ Show that $F$ is a field under the usual matrix operations.
             
+            \begin{proof}
+                $\inv{\mat{a & b \\ -3b & a}}=\frac{1}{a^2+3b^2}\mat{a&b\\-3b&a}$ and $\mat{a&b\\-3b&a}\mat{x&y\\-3y&x}=\mat{ax-3by&ay+bx\\-3(ay+bx)&ax-3by}$. Addition follows trivially.
+            \end{proof}
+
             %#26
             \item Let $R$ be the ring of all $2\times 2$ matrices of the form $\mat{a &b\\-b&a}$ where $a$ and $b$ are real numbers. Prove that $R$ is isomorphic to $\C$, the field of complex numbers.
             
+            \begin{proof}
+                
+            \end{proof}
+
             %#27
             \item Let $p$ be a prime and let $R$ be the ring of all $2\times 2$ matrices of the form $\mat{a&b\\pb&a}$, where $a,b\in \Z$. Prove that $R$ is isomorphic to $\Z[\sqrt{p}]$.
             

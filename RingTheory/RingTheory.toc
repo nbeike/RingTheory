@@ -1,9 +1,9 @@
 \contentsline {section}{\numberline {1}Ring Theory}{3}{}%
 \contentsline {subsection}{\numberline {1.1}General Ring Theory}{3}{}%
-\contentsline {subsection}{\numberline {1.2}Prime, Maximal, and Primary Ideals}{7}{}%
-\contentsline {subsection}{\numberline {1.3}Commutative Rings}{10}{}%
-\contentsline {subsection}{\numberline {1.4}Domains}{11}{}%
-\contentsline {subsection}{\numberline {1.5}Polynomial Rings}{12}{}%
-\contentsline {subsection}{\numberline {1.6}Non-commutative Rings}{13}{}%
-\contentsline {subsection}{\numberline {1.7}Local Rings, Localization, Rings of Fractions}{14}{}%
-\contentsline {subsection}{\numberline {1.8}Chains and Chain Conditions}{14}{}%
+\contentsline {subsection}{\numberline {1.2}Prime, Maximal, and Primary Ideals}{8}{}%
+\contentsline {subsection}{\numberline {1.3}Commutative Rings}{11}{}%
+\contentsline {subsection}{\numberline {1.4}Domains}{12}{}%
+\contentsline {subsection}{\numberline {1.5}Polynomial Rings}{14}{}%
+\contentsline {subsection}{\numberline {1.6}Non-commutative Rings}{14}{}%
+\contentsline {subsection}{\numberline {1.7}Local Rings, Localization, Rings of Fractions}{15}{}%
+\contentsline {subsection}{\numberline {1.8}Chains and Chain Conditions}{16}{}%
