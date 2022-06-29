@@ -1,0 +1,776 @@
+\documentclass{article}
+\usepackage{amssymb,amsmath,amsfonts,amsthm,graphicx, pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{multicol}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usetikzlibrary{angles,quotes}
+\DeclareGraphicsExtensions{.pdf}
+
+\usepackage[a4paper,margin=1in]{geometry}
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+\usepackage[none]{hyphenat}
+
+\title{ALGEBRA QUALIFYING EXAM PROBLEMS \\ RING THEORY}
+\author{Nic Beike}
+\sloppy
+\relpenalty=9999
+\binoppenalty=9999
+
+\newcommand{\m}[1]{(\text{mod }{#1})}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\mat}[1]{\begin{bmatrix*}[r] #1 \end{bmatrix*}}
+\newcommand{\x}{\times}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\inv}[1]{{#1}^{-1}}
+
+
+
+
+
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+
+
+
+\section{Ring Theory}
+
+    \begin{enumerate}    
+
+        \subsection{General Ring Theory}
+
+            %#1
+            \item Give an example of each of the following
+                \begin{enumerate}
+                    \item An irreducible polynomial of degree 3 in $\mathbb{Z}_3[x]$
+                    \item A polynomial in $\mathbb{Z}[x]$ that is not irreducible in $\mathbb{Z}[x]$ but is irreducible in $\mathbb{Q}[x]$
+                    \item A non-commutative ring of characteristic $p$, $p$ a prime 
+                    \item A ring with exactly 6 inverible elements
+                    \item An infinite non-commutative ring with only finitely many ideals.
+                    \item An infinite non-commutative ring with non-zero characteristic.
+                    \item An integral domain which is not a unique factorization domain. 
+                    \item A unique factorization domain that is not a principal ideal domain
+                    \item A principal ideal domain that is not a Euclidean domain.
+                    \item A Euclidean domain other than the ring of integers of a field.
+                    \item A finite non-commutative ring.
+                    \item A commutative ring with a sequence $\{P_n\}_{n=1}^{\infty}$ of prime ideals such that $P_n$ is properly contained in $P_{n+1}$ for all $n$.
+                    \item A non-zero prime ideal of a commutative ring that is not a maximal ideal.
+                    \item An irreducible element of a commutative ring that is not a prime element. 
+                    \item An irreducible element of an integral domain that is not a prime element. 
+                    \item A commutative ring that has exactly one maximal ideal and is not a field.
+                    \item A non-commutative ring with exactly two maximal ideals.
+                \end{enumerate}
+            
+            %#2
+            \item 
+                \begin{enumerate}
+                    \item How many units does the ring $\mathbb{Z}/60\mathbb{Z}$ have? Explain your answer.
+                    \item How many ideals does the ring $\mathbb{Z}/60\mathbb{Z}$ have? Explain your answer.
+                \end{enumerate}
+                \begin{proof}
+                    For (a), we can use the fact that $a$ is a unit if $\gcd(a,n)=1$. Thus \\ $\mid  U_{60} \mid =\mid \{1,7,11,13,17,19,23,29,31,37,41,43,47,53,57,59\}\mid =16$.
+
+                    For (b) use the fact that $\mathbb{Z}/d\mathbb{Z}$ is an ideal of $\mathbb{Z}/n\mathbb{Z}$ when $d\mid n$. So let $D=\{d\in \mathbb{Z}/60\mathbb{Z}:d\mid 60\}=\\ \{2^x\cdot 3^y\cdot 5^z:0\leq x\leq 2, 0\leq y \leq 1, 0 \leq z \leq 1\}$. Thus the number of ideals is equal to $\mid D\mid =3\cdot 2 \cdot 2=12$
+                \end{proof}
+
+            %#3
+            \item How many ideals does the ring $\mathbb{Z}/90\mathbb{Z}$ have? Explain your answer.
+                \begin{proof}
+                    Use the fact that $\mathbb{Z}/d\mathbb{Z}$ is an ideal of $\mathbb{Z}/n\mathbb{Z}$ when $d\mid n$. Let $D=\{d\in \mathbb{Z}/90\mathbb{Z}:d\mid 90\}= \\ \{2^x \cdot 3^y \cdot 5^z: 0\leq x \leq 1, 0\leq y \leq 2, 0\leq z \leq 1\}$. Then the number of ideals is equal to $\mid D\mid =2\cdot 3 \cdot 2=12$.
+                \end{proof}
+
+            %#4
+            \item Denote the set of inverible elements of the ring $\mathbb{Z}_n$ by $U_n$.
+                \begin{enumerate}
+                    \item List all the elements of $U_{18}$.
+                    \item Is $U_{18}$ a cyclic group under multiplication? Justify your answer.
+                \end{enumerate}
+                
+                \begin{proof}
+                    Use the fact that $a$ is a unit if $\gcd(a,18)=1$. So the invertible elements of $\mathbb{Z}_{18}$ are $U_{18}=\{1,5,7,11,13,17\}$. Note that $\langle 5 \rangle = \{5,7,17,13,11,1\}=U_{18}$. Therefore $U_{18}$ is cyclic.
+                \end{proof}
+
+            %#5
+            \item Denote the set of inverible elements of the ring $\mathbb{Z}_n$ by $U_n$.
+                \begin{enumerate}
+                    \item List all the elements of $U_{24}$.
+                    \item Is $U_{24}$ a cyclic group under multiplication? Justify your answer.
+                \end{enumerate}
+
+                \begin{proof}
+                    Use the fact that $a$ is a unit if $\gcd(a,24)=1$. So the invertible elements of $\mathbb{Z}_{18}$ are $U_{24}=\{1,5,7,11,13,17,19,23\}$. Note that $x^2=1$ for all $x\in U_{24}$. Therefore $U_{24}$ is not cyclic.
+                \end{proof}
+
+            %#6
+            \item Find all positive integers $n$ having the property that the group of units of $\mathbb{Z}/n\mathbb{Z}$ is an elementary abelian 2-group.
+            
+            %#7
+            \item Let $U(R)$ denote the group of units of a ring R. Prove that if $m$ divides $n$, then the natural ring homomorphism $\mathbb{Z}_n\to\mathbb{Z}_m$ maps $U(\mathbb{Z}_n)$ onto $U(\mathbb{Z}_m)$. Give an example that shows that $U(R)$ does not have to map onto $U(S)$ under a surjective ring homomorphism $R\to S$.
+            
+            %#8
+            \item If $p$ is a prime satisfying $p\equiv 1(\text{mod } 4)$, then $p$ is a sum of two squares.
+            
+            %#9
+            \item If $(\div)$ denotes the Legendre symbol, prove Euler's Critereon: if $p$ is a prime and $a$ is any integer relatively prime to $p$, then $a^{(p-1)/2}\equiv \left(\dfrac{a}{p}\right) (\text{mod } p)$
+            
+            %#10
+            \item Let $R_1$ and $R_2$ be commutative rings with identities and let $R=R_1\times R_2$. Show that every ideal $I$ of $R$ is of the form $I=I_1\times I_2$ with $I_i$ an ideal of $R_i$ for $i=1,2$.
+            
+                \begin{proof}
+                    Let $I$ be an ideal fo $R=R_1\times R_2$. Define $I_1=\{r\in R_1:\exists s\in R_2 \text{ where } (r,s)\in I\}$ and $I_2=\{s\in R_2: \exists r \in R_1 \text{ where } (r,s)\in I\}$. 
+                    
+                    Note that if $r\in I_1$, then there exists $s\in R_2$ such that $(r,s)\in I$. Thus $(a,1_{R_2})(r,s)=(ar,s)\in I$, and so $ar\in I_1$. Thus $I_1$ is an ideal of $R_1$. By a similar argument, we can see that $I_2$ is an ideal of $R_2$. Now it is clear that $I\subseteq I_1\times I_2$. 
+                    
+                    To show the reverse inclusion, suppose that $r\in I_1$, and $s\in I_2$ such that $(r,s)\in I_1\times I_2$. Since $r\in I_1$, then there is an $s'\in I_2$ such that $(r,s')\in I$. Also since $s\in I_2$, then there exists an $r'\in I_2$ such that $(r',s)\in I$. Now we see that $(1_R,s)(r,s')=(r,ss')\in I$, and $(1_R,s')(r',s)=(r',ss')\in I$. Thus $(r,ss')-(r',ss')+(r',s)=(r,s)\in I$. Therefore $I_1\times I_2\subseteq I$ so $I=I_1\times I_2$, as desired.
+                \end{proof}
+            %#11
+            \item Show that a non-zero ring $R$ in which $x^2=x$ for all $x\in R$ is of characteristic 2 and is commutative.
+                \begin{proof}
+                    Let $x\in R$ and note that $x+x=(x+x)^2=x^2+x^2+x^2+x^2=x+x+x+x$. Thus $x+x=0$, so $R$ has characteristic zero. 
+
+                    Now let $x,y\in R$. Then $x+y=(x+y)^2=x^2+xy+yx+y^2$. Rearranging terms gives $0=xy+yx$. Now $xy=xy+xy+yx=(xy+xy)+yx=0+yx=yx$. Thus we conclude that $R$ is commutative.
+                \end{proof}
+            
+            %#12
+            \item Let $R$ be a finite commutative ring with more than one element and no zero-divisors. Show that $R$ is a field.
+            
+                \begin{proof}
+                    Define $\phi:R\to R$ by $\phi(r)=xr$ for all $r\in R$ and a fixed nonzero element $x\in R$. Suppose that for two elements $r,s\in R$, $\phi(r)=phi(s)$. Then we have $xr=xs$ or $xr-xs=0$ or $x(r-s)=0$. Since $x$ is nonzero and $R$ has no zero divisors, we see that $r-s=0$, and so $r=s$. Thus the map $\phi$ is injective. Since we are mapping from $R\to R$, then $\phi$ must also be surjective and thus bijective. 
+                    
+                    First we show that $R$ has an identity element. By the surjectivity of $\phi$ there must be an element $e\in R$ such that $x=\phi(e)=ex$. Now let $b\in R$. Then by the surjectivity of $\phi$ there is an element $y_b\in R$ such that $b=\phi(y_b)=y_bx$. Now we have $b=y_bx=y_bex=(y_bx)e=be$. Thus $e=1$ since it fixes every element in $R$. 
+
+                    Now again by the surjectivity of $\phi$, we must have some $r\in R$ such that $\phi(r)=rx=1$. Thus $x$ is a unit and since the choice of $x$ was arbitrary (except for the restriction of $x$ being nonzero), we conclude that $R$ must be a field.
+                \end{proof}
+
+            %#13
+            \item Determine for which integers $n$ the ring $\mathbb{Z}/n\mathbb{Z}$ is a direct sum of fields. Prove your answer.
+            
+            %#14
+            \item Let $R$ be a subring of a field $F$ such that for each $x$ in $F$ either $x\in R$ or $x^{-1}\in R$. Prove that if $I$ and $J$ are ideals of $R$, then either $I\subseteq J$ or $J\subseteq I$.
+            
+            \begin{proof}
+                Suppose $I\nsubseteq J$. It suffices to show that $J\subseteq I$. Since $I \nsubseteq J$, then there is a nonzero $a\in I\setminus J$. If $b\in J$, we want to show that $b\in I$. 
+
+                If $b=0$, then we are done since $I$ is an ideal, and must contain zero. Now suppose $b\neq 0$. Then there is an inverse $b^{-1}\in F$ and so $ab^{-1}\in F$. Thus either $ab^{-1}\in R$ or $ba^{-1}\in R$. If $ab^{-1}\in R$, then $a=ab^{-1}b\in J$, a contradiction. 
+                
+                Thus it must be the case that $ba^{-1}\in R$, and so $b=ba^{-1}a\in I$. Therefore $b\in I$ and $J\subseteq I$, as desired. 
+            \end{proof}
+
+            %# 15
+            \item The \textit{Jacobson Radical} $J(R)$ of a ring $R$ is defined to be the intersection of all maximal ideals of $R$. Let $R$ be a commutative ring with $1$ and let $x\in R$. Show that $x\in J(R)$ if and only if $1-xy$ is a unit for all $y$ in R.
+            
+            \begin{proof}
+                Suppose that $x\in J(R)$. Then $x\in I_i$ where $I_i$ is a maximal ideal. Then $xy\in I_i$ for all $i$, and so $xy\in J(R)$. Thus $xy$ is quasiregular and so $1-xy$ is a unit for all $y$ in $R$.
+
+                Now suppose that $1-xy$ is a unit for all $y\in R$ and $x\notin J(R)$. Then there exists a maximal ideal $M$ such that $x\notin M$. Thus $\langle x \rangle +M=R$. So there exists a $y\in R$ and $m\in M$ such that $xy+m=1$. Thus $m=1-xy\in M$ is a unit. So we must have $M=R$, but this is a contradiction to the maximality of $M$.
+            \end{proof}
+
+            %#16
+            \item Let $R$ be any ring with identity, and $n$ any positive integer. If $M_n(R)$ denotes the ring or $n\times n$ matrices with entries in $R$, prove that $M_n(I)$ is an ideal of $M_n(R)$ whenever $I$ is an ideal of $R$, and that every ideal of $M_n(R)$ has this form.
+            
+            %#17
+            \item Let $m,n$ be positive integers such that $m$ divides $n$. Then the natural map $\phi:\mathbb{Z}_n \to \mathbb{Z}_m$ given by $a+(n) \mapsto a+(m)$ is a surjective ring homomorphism. If $U_n,U_m$ are the units of $\mathbb{Z}_n$ and $\mathbb{Z}_m$, respectively, show that $\phi:U_n\to U_m$ is a surjective group homomorphism.
+            
+            %#18
+            \item Let $R$ be a ring with the ideals $A$ and $B$. Let $R/A\times R/B$ be the ring with coordinate-wise addition and multiplication. Show the following.
+            
+            \begin{enumerate}
+                \item The map $R\to R/A\times R/B$ given by $r\mapsto (r+A,r+B)$ is a ring homomorphism. 
+                \item The homomorphism is part (a) is surjective if and only if $A+B=R$.
+            \end{enumerate}
+
+            %#19
+            \item Let $m$ and $n$ be relatively prime integers. 
+            
+            \begin{enumerate}
+                \item Show that if $c$ and $d$ are any integers, then there is an integer $x$ such that $x\equiv c \m{m}$ and $x\equiv d \m{n}$.
+                \item Show that $\Z_{mn}$ and $\Z_m \times \Z_n$ are isomorphic as rings.
+            \end{enumerate}
+
+            %#20 
+            \item Let $R$ be a commutative ring with $1$ and let $I$ and $J$ be ideals of $R$ such that $I+J=R$. Show that $R/(I\bigcap J) \cong R/I \oplus R/J$.
+            
+            %#21
+            \item Let $R$ be a commutative ring with identity and let $I_1, I_2, \dotsb , I_n$ be pairwise co-maximal ideals of $R$ (i.e, $I_i+I_j=R$ if $i\neq j$). Show that $I_i+\bigcap_{j\neq i} I_j=R$ for all $i$.
+            
+            %#22
+            \item Let $R$ be a commutative ring, not necessarily with identity, and assume there is some fixed positive integer $n$ such that $nr=0$ for all $r\in R$. Prove that $R$ embeds in a ring $S$ with identity so that $R$ is an ideal of $S$ and $S/R\cong \Z/n\Z$.
+            
+            %#23 
+            \item Let $R$ be a ring with identity $1$ and $a,b\in R$ such that $ab=1$. Denote $X=\{x\in R\mid  ax=1\}$. Show the following.
+            
+            \begin{enumerate}
+                \item If $x\in X$, then $b+(1-x)\in X$.
+                \item If $\phi:X\to X$ is the mapping given by $\phi(x)=b+(1-xa)$, then $\phi$ is one-to-one.
+                \item If $X$ has more than one element, then $X$ is an infinite set.
+            \end{enumerate}
+
+            %#24
+            \item Let $R$ be a commutative ring with identity and define $U_2(R)=\left\{\begin{bmatrix} a&b\\0&c \end{bmatrix} \mid  a,b,c\in R \right\}$. Prove that every $R$-automorphism of $U_2(R)$ is inner.
+            
+            %#25
+            \item Let $\R$ be the field of real numbers and let $F$ be the set of all $2\times 2$ matrices of the form $\mat{a & b\\-3b&a}$, where $a,b\in \R$ Show that $F$ is a field under the usual matrix operations.
+            
+            %#26
+            \item Let $R$ be the ring of all $2\times 2$ matrices of the form $\mat{a &b\\-b&a}$ where $a$ and $b$ are real numbers. Prove that $R$ is isomorphic to $\C$, the field of complex numbers.
+            
+            %#27
+            \item Let $p$ be a prime and let $R$ be the ring of all $2\times 2$ matrices of the form $\mat{a&b\\pb&a}$, where $a,b\in \Z$. Prove that $R$ is isomorphic to $\Z[\sqrt{p}]$.
+            
+            %# 28
+            \item Let $p$ be a prime and $F_p$ the set of all $2\x 2$ matrices of the form $\mat{a&b\\-b&a}$, where $a,b\in \Z_p$.
+            
+            \begin{enumerate}
+                \item Show that $F_p$ is a commutative ring with identity.
+                \item SHow that $F_7$ is a field.
+                \item Show that $F_{13}$ is not a field.
+            \end{enumerate}
+
+            %#29
+            \item Let $I\subseteq J$ be right ideals of a ring $R$ such that $J/I \equiv R$ as right $R$-modules. Prove that there exists a right ideal $K$ such that $I\cap K=(0)$ and $I+K=J$.
+            
+            %#30
+            \item A ring $R$ is called simple if $R^2 \neq 0$ and $0$ and $R$ are its only ideals. Show that the center of a simple ring is $0$ or a field. 
+            
+            %#31
+            \item Give an example of a field $F$ and a one-to-one ring homomorphism $\phi : F\to F$ which is not onto. Verify your example.
+            
+            %#32
+            \item Let $D$ be an integral domain and let $D\mat{x_1, x_2, \hdots,  x_n}$ be the polynomial ring over $D$ in the $n$ indeterminates $x_1, x_2, \hdots, x_n$. Let \[V=\begin{bmatrix*}[c] x^{n-1}_1 & \hdots & x^2_1 & x_1 & 1 \\ x^{n-1}_2 & \hdots & x^2_2 & x_2 & 1 \\ \vdots & & \vdots & \vdots & \vdots \\ x^{n-1}_n & \hdots & x^2_n & x_n & 1 \end{bmatrix*}.\]  Prove that the determinant of $V$ is $\prod_{1\leq i <j \leq n} (x_i-x_j)$.
+            
+            %#33
+            \item Let $R=C[0,1]$ be the set of all continuous real-valued functions on $[0,1]$. Define addition and multiplication on $R$ as follows. For $f,g\in R$ and $x\in [0,1]$, \[(f+g)(x)=f(x)+g(x) \text{ and } (fg)(x)=f(x)g(x).\]
+            
+            \begin{enumerate}
+                \item Show that $R$ with these operations is a commutative ring with identity.
+                \item Find the units of $R$.
+                \item If $f\in R$ and $f^2=f$, then $f=0_R$ of $f=1_R$.
+                \item If $n$ is a positive integer and $f\in R$ is such that $f^n=0_R$, then $f=0_R$
+            \end{enumerate}
+
+            %#34
+            \item Let $S$ be the ring of all bounded, continuous functions $f:\R \to \R$, where $\R$ is the set of real numbers. Let $I$ be the set of functions $f$ in $S$ such that $f(t) \to 0$ as $\mid t\mid  \to \infty $.
+            
+            \begin{enumerate}
+                \item Show that $I$ is an ideal of $S$.
+                \item Suppose $x\in S$ is such that there is an $i\in I$ with $ix=x$. Show that $x(t)=0$ for all sufficiently large $\mid t\mid $.
+            \end{enumerate}
+
+            %#35
+            \item Let $\Q$ be the field of rational numbers and $D=\{a+b\sqrt{2}\mid a,b\in \Q\}$. 
+            
+            \begin{enumerate}
+                \item Show that $D$ is a subring of the field of real numbers.
+                \item Show that $D$ is a principal ideal domain.
+                \item show that $\sqrt{3}$ is not an element of $D$.
+            \end{enumerate}
+
+            %#36
+            \item Show that if $p$ is a prime such that $p\equiv 1 \m{4}$, then $x^2+1$ is not irreducible in $\Z_p[x]$.
+            
+            %#37
+            \item Show that if $p$ is a prime such that $p \equiv 4\m{4}$, then $x^2+1$ is irreducible in $\Z_p[x]$.
+            
+            %#38
+            \item Show that if $p$ is a prime such that $p\equiv 1\m{6}$, then $x^3+1$ splits in $\Z_p[x]$.
+        
+        \subsection{Prime, Maximal, and Primary Ideals}
+
+            %#39
+            \item Let $R$ be a non-zero commutative ring with $1$. Show that an ideal $M$ of $R$ is maximal if and only if $R/M$ is a field.
+            
+            \begin{proof}
+                By the correspondence theorem, $M$ is a maximal ideal of $R$ if and only if $0$ is a maximal ideal of $R/M$. Also, it is known that a commutative ring is a field if and only if $0$ is a maximal ideal. Thus the result follows.
+            \end{proof}
+
+            %#40
+            \item Let $R$ be a commutative ring with $1$. Show that an ideal $P$ of $R$ is prime if and only if $R/P$ is an integral domain.
+            
+            \begin{proof}
+                First let $P$ be a prime ideal of $R$. Then $R/P$ is a prime ring. Let $a,b \in R/P$ such that $ab=0$. Then we can say that $(a)(b)=0$ where $(a)$ and $(b)$ are ideals generated by $a$ and $b$ respectively in $R/P$. But then we know that either $(a)=0$ or $(b)=0$ since $R/P$ is a prime ring. Therefore, we must have $a=0$ or $b=0$ and so $R/P$ is an integral domain.
+
+                Now suppose that $R/P$ is an integral domain. Suppose $A$ and $B$ are ideals such that $AB=0$. Then pick $a_1\in A$. Then, since $R/P$ is an integral domain, we have $a_1b_i=0$ for all $b_i\in B$ or $a_1=0$. Continuing in this way, we must have either $A=0$ or $B=0$. Thus $R/P$ is prime so $P$ is a prime ideal
+            \end{proof}
+
+            %#41
+            \item
+                \begin{enumerate}
+                    \item Let $R$ be a commutative ring with $1$. Show that if $M$ is a maximal ideal of $R$ then $M$ is a prime ideal of $R$.
+                    \item Give an example of a non-zero prime ideal in a ring $R$ that is not a maximal ideal.
+                \end{enumerate}
+
+            \begin{proof}
+                For (a) since $M$ is a maximal ideal then $R/M$ is a field and thus an integral domain. Since $R/M$ is an integral domain, then $M$ is a prime ideal of $R$.
+
+                For (b) note that $\Z[x]/(x) \equiv \Z$ so $(x)$ is a prime ideal of $\Z[x]$ but $(x)$ is not maximal in $\Z[x]$ since $\Z$ is not a field.
+            \end{proof}
+            
+            %#42
+            \item Let $R$ be a non-zero ring with identity. Show that every proper ideal of $R$ is contained in an maximal idea. 
+            
+            \begin{proof}
+                Let $I \subsetneq R$ be a proper ideal. Define the set $P=\set{A \mid I \subseteq A\subsetneq R \text{ is an ideal of }R}$. Let $\mathcal{C}$ be a chain of ideals in $P$. Then $U_\mathcal{C}=\bigcup _{A\in \mathcal{C}}A$ is an ideal of $R$ containing $I$ and is an upper bound for $\mathcal{C}$. Notice that $1\notin U_\mathcal{C}$ since $1$ was not in any of the ideals from $\mathcal{C}$ as the ideals in $\mathcal{C}$ are proper in $R$. Thus we have that $U_\mathcal{C}\in P$. Now we can apply Zorn's Lemma. So there exists a maximal element $\mathscr{A}$ of the set $P$. It follows that $I\subseteq \mathscr{A}\subsetneq R$ and so $I$ is contained in the maximal ideal $\mathscr{A}$.
+                
+            \end{proof}
+            
+            %#43
+            \item Let $R$ be a commutative ring with $1$ and $P$ a prime ideal of $R$. Show that if $I$ and $J$ are ideals of $R$ such that $I\cap J \subseteq P$ and $J\nsubseteq P$, then $I\subseteq P$.
+            
+            %#44
+            \item Let $M_1 \neq M_2$ be two maximal ideals in the commutative ring $R$ and let $I=M_1\cap M_2$. Prove that $R/I$ is isomorphic to the direct sum of two fields. 
+            
+            %#45
+
+            \item Let $R$ be a non-zero commutative ring with $1$. Show that if $I$ is an ideal of $R$ such that $1+a$ is a unit in $R$ for all $a\in I$, then $I$ is contained in every maximal ideal of $R$.
+            
+            %#46
+            \item Let $R$ be a commutative ring with identity. Suppose $R$ contains an idempotent element $a$ other that $0$ or $1$. Show that every prime ideal of $R$ contains an idempotent element other that $0$ or $1$. (An element $a\in R$ is idempotent if $a^2=a$)
+            
+            %#47
+            \item Let $R$ be a commutative ring with $1$.
+                
+                \begin{enumerate}
+                    \item Prove that $(x)$ is a prime ideal in $R[x]$ if and only id $R$ is an integral domain.
+                    \item Prove that $(x)$ is a maximal ideal in $R[x]$ if and only if $R$ is a field.
+                \end{enumerate}
+            
+            %#48
+            \item Find all values of $a$ in $\Z_3$ such that the quotient ring \[\Z_3[x]/(x^3+x^2+ax+1)\] is a field. Justify your answer.
+            
+            %#49
+            \item Find all values of $a$ in $\Z_5$ such that the quotient ring \[\Z_5[x]/(x^3+2x^2+ax+3)\] is a field. Justify your answer.
+            
+            %#50
+            \item Let $R$ be a commutative ring with identity and let $U$ be maximal among non-finitely generalted ideals of $R$. Prove $U$ is a prime ideal.
+            
+            %#51
+            \item Let $R$ be a commutative ring with identity and let $U$ be a maximal among non-principal ideals of $R$. Prove $U$ is a prime ideal. 
+            
+            %#52
+            \item Let $R$ be a non-zero commutative ring with $1$ and $S$ a multiplicative sibset of $R$ not containing $0$. Show that if $P$ is maximal in the set of ideals of $R$ not intersecting $S$, then $P$ is a prime ideal.
+            
+            %#53
+            \item Let $R$ be a non-zero commutative ring with $1$. 
+                
+                \begin{enumerate}
+                    \item Let $S$ be a multiplicative subset of $R$ not containing $0$ and let $P$ be maximal in the set of ideals of $R$ not intersecting $S$. Show that $P$ is a prime ideal.
+                    \item Show that the set of nilpotent elements of $R$ is the intersection of all prime ideals.
+                \end{enumerate}
+            
+            %#54
+            \item Let $R$ be a commutative ring with identity and let $x\in R$ be a non-nilpotent element. Prove that there exists a prime ideal $P$ of $R$ such that $x\notin P$.
+            
+            %#55
+            \item Let $R$ be a commutative ring with identity and let $S$ be the set of all elements of $R$ that are \textit{not} zero-divisors. Show that there is a prime ideal $P$ such that $P\cap S$ is empty. (Hint: Use Zorn's Lemma)
+            
+            %#56
+            \item Let $R$ be a commutative ring with identity and let $\mathcal{C}$ be a chain of prime ideals of $R$. Show that $\bigcup _{P\in \mathcal{C}} P$ and $\bigcap _{P\in \mathcal{C}} P$ are prime ideals of $R$.
+            
+            %#57
+            \item Let $R$ be a commutative ring and $P$ be aa prime ideal of $R$. Show that there is a prime ideal $P_0\subseteq P$ that does not properly contain any prime ideal.
+            
+            %#58
+            \item Let $R$ be a commutative ring with $1$ such that every $x$ in $R$ there is an integer $n>1$ (depending on $x$) such that $x^n=x$. Show that every prime ideal of $R$ is maximal.
+            
+            %#59
+            \item Let $R$ be a commutative ring with $1$ in which every ideal is a prime ideal. Prove that $R$ is a field. (Hint: For $a\neq 0$ consider the ideals $(a)$ and $(a^2)$.)
+            
+            %#60
+            \item Let $D$ be a principal ideal domain. Prove that every nonzero prime ideal of $D$ is a maximal ideal. 
+            
+            %#61
+            \item Show that if $R$ is a finite commutative ring with identity, then every prime ideal of $R$ us a maximal ideal.
+            
+            %#62
+            \item Let $R=C[0,1]$ be the ring of all continuous real-valued functions on $[0,1]$, with addition and multiplication defined as follows. For $f,g\in R$ and $x\in [0,1]$, \[(f+g)(x)=f(x)+g(x)\] \[(fg)(x)=f(x)g(x).\] Prove that if $M$ is a maximal ideal of $R$, then there is a real number $x_0\in [0,1]$ such that $M=\{f\in R \mid  f(x_0)=0\}$.
+            
+            %#63
+            \item Let $R$ be a commmutative ring with identity, and let $P\subset Q$ be prime ideals of $R$. Prove there exists prime ideals $P^*, Q^*$ satisfying $P\subseteq P^* \subset Q^* \subseteq Q$, such that there are no prime ideals strictly between $P^*$ and $Q^*$. (Hint: Fix $x\in Q \setminus P$ and show that there exists a prime ideal $P^*$ containing $P$, contained in $Q$ and maximal with respect to not containing $x$.)
+        
+            %#64
+            \item Let $R$ be a commutative ring eith $1$. An ideal $I$ of $R$ is called a \textit{primary} ideal if $I\neq R$ and for all $x,y\in R$ with $xy\in I$, either $x\in R$ or $y^n\in R$ for some integer $n \geq 1$.
+            
+            \begin{enumerate}
+                \item Show that an ideal $I$ of $R$ is primary if and only if $R/I \neq 0$ and every zero-divisor in $R/I$ is nilpotent.
+                \item Show that if $I$ is a primary ideal of $R$ then the radical $\text{Rad}(I)$ of $I$ is a prime ideal. (Recall that $\text{Rad}(I)=\{x\in R\mid x^n\in I \text{ for some } n\}$.)
+            \end{enumerate}
+
+        \subsection{Commutative Rings}
+
+            %#65
+            \item Let $R$ be a commutative ring with identity. Show that $R$ is an integral domain if and only if $R$ is a subring of a field. 
+            
+            %#66
+            \item Let $R$ be a commutative ring with identity. Show that if $x$ and $y$ are nilpotent elements of $R$ then $x+y$ is nilpotent and the set of all nillpotent elements is an ideal in $R$.
+            
+            %#67
+            \item Let $R$ be a commutative ring with identity. An ideal $I$ of $R$ is \textit{irreducible} if it cannot be expressed as the intersection of two ideals of $R$ neither of which is contained in the other. Show the following. 
+            
+            \begin{enumerate}
+                \item If $P$ is a prime ideal then $P$ is irreducible.
+                \item If $x$ is a non-zero element of $R$, then there is an ideal $I_x$, maximal with respect to the property that $x\notin I_x$, and $I_x$ is irreducible.
+                \item If every irreducible ideal of $R$ is a prime ideal, then $0$ is the only nilpotent element of $R$.
+            \end{enumerate}
+
+            %#68
+            \item Let $R$ be a commutative ring with $1$ and let $I$ be an ideal of $R$ satisfying $I^2=\{0\}$. Show that if $a+I\in R/I$ is an idempotent element of $R/I$, then the coset $a+I$ contains an idempotent element of $R$.
+            
+            %#69
+            \item Let $R$ be a commutative ring with identity that has exactly one prime ideal $P$. Prove the following
+            
+            \begin{enumerate}
+                \item $R/P$ is a field.
+                \item $R$ is isomorphic to $R_p$, the ring of quotients of $R$ with respect to the multiplicative set $R\setminus P=\{s\in R\mid s\notin P\}$
+            \end{enumerate}
+
+            %#70
+            \item Let $R$ be a commutative ring with identity and $\sigma : R\to R$ a ring automorphism.
+
+            \begin{enumerate}
+                \item Show that $F=\{r\in R \mid  \sigma (R)=r\}$ is a subring of $R$ and the identity of $R$ is in $F$.
+                \item Show that if $\sigma^2$ is the identity map on $R$, then each element of $R$ is the root of a monic polynomial of degree two in $F[x]$.
+            \end{enumerate}
+
+            %#71
+            \item Let $R$ be a commutative ring with identity that has exactly three ideals $\{0\}$, $I$, and $R$.
+            
+            \begin{enumerate}
+                \item Show that if $a\notin I$, then $a$ is a unit of $R$.
+                \item Show that if $a,b \in I$ then $ab=0$
+            \end{enumerate}
+
+            %#72
+            \item Let $R$ be a commutative ring with $1$. Show that if $u$ is a unit in $R$ and $n$ is nilpotent, then $u+n$ is a unit.
+            
+            %#73
+            \item Let $R$ be a commutative ring with identity. Suppose that for every $a\in R$, either $a$ or $1-a$ is invertible. Prove that $N=\{a\in R\mid a \text{ is not invertible}\}$ is an ideal of $R$.
+            
+            %#74
+            \item Let $R$ be a commutative ring with $1$. Show that the sum of any two principal ideals of $R$ is principal if and only if every finitely generated ideal of $R$ is principal.
+            
+            %#75
+            \item Let $R$ be a commutative ring with identity such that not every ideal is a principal ideal.
+            
+            \begin{enumerate}
+                \item Show that there is an ideal $I$ maximal with respect to the property that $I$ is not a principal ideal.
+                \item If $I$ is the ideal of part (a), show that $R/I$ is a principal ideal ring.
+            \end{enumerate}
+
+            %#76
+            \item Recall that if $R\subseteq S$ is an inclusion of commutative rings (with the same identity) then an element $s\in S$ is \textit{integral over} $R$ if $s$ satisfies some monic polynomial with coefficients in $R$. Prove the equivalence of the following statements.
+            
+            \begin{enumerate}
+                \item $s$ is integral over $R$.
+                \item $R[s]$ is finitely generated as an $R$-module.
+                \item There exists a faithful $R[s]$ module which is finitely generated as an $R$-module.
+            \end{enumerate}
+
+            %#77
+            \item Recall that if $R\subseteq S$ is an inclusion of commmutative rings (with the same identity) then $S$ is an \textit{integral} extension of $R$ if every element of $S$ satisfies some monic polynomial with coefficients in $R$. Prove that if $R\subseteq S\subseteq T$ are commutative rings with the same identity, then $S$ is integral over $R$ and $T$ if and only if $T$ is integral over $R$.
+            
+            %#78
+            \item Let $R\subseteq S$ be commutative domains with the same identity, and assime that $S$ is an integral Extension of $R$. Let $I$ be a nonzero ideal of $S$. Prove the $I\cap R$ is a nonzero ideal of $R$.
+
+        \subsection{Domains}
+
+            %#79
+            \item Suppose $R$ is a domain and $I$ and $J$ are ideals of $R$ such that $IJ$ is principal. Show that $I$ (and by symmetry $J$) is finitely generated. 
+            
+                [Hint: If $IJ=(a)$, then $\sum_{i=1}^n x_iy_i$ for some $x_i\in I$ and $y_i\in J$. Show the $x_i$ generate $I$.]
+            
+            %#80 
+            \item Prove that if $D$ is a Euclidean Domain, then $D$ is a Principal Ideal Domain.
+            
+            %#81
+            \item Show that if $p$ is a prime such that there is an integer $b$ with $p=b^2+4$, then $\Z[\sqrt{p}]$ is not a unique factorization domain.
+            
+            %#82
+            \item Show that if $p$ is a prime such that $p\equiv 1 \m{4}$, then $\Z[\sqrt{p}]$ is not a unique factorization domain.
+            
+            %#83
+            \item Let $D=\Z(\sqrt{5})=\{m+n\sqrt{5}\mid m,n\in \Z\}$ - a subring of the field of real numbers and necessarily an integral domain (you need not show this) - and $F=\Q(\sqrt{5})$ its field of fractions. Show the following:
+            
+            \begin{enumerate}
+                \item $x^2+x-1$ is irreducible in $D[x]$ but not in $F[x]$.
+                \item $D$ is not a unique factorization domain.
+            \end{enumerate}
+
+            %#84
+            \item Let $D=\Z(\sqrt{21})=\{m+n\sqrt{21}\mid m,n\in \Z\}$ and $F=\Q(\sqrt{21})$, the field of fractions. Show the following:
+            
+            \begin{enumerate}
+                \item $x^2-x-5$ is irreducible in $D[x]$ but not in $F[x]$.
+                \item $D$ is not a unique factorization domain.
+            \end{enumerate}
+
+            %#85
+            \item Let $D=\Z(\sqrt{-11})=\{m+n\sqrt{-11}\mid m,n\in \Z\}$ and $F=\Q(\sqrt{-11})$, the field of fractions. Show the following:
+            
+            \begin{enumerate}
+                \item $x^2-x+3$ is irreducible in $D[x]$ but not in $F[x]$.
+                \item $D$ is not a unique factorization domain.
+            \end{enumerate}
+
+            %#86
+            \item Let $D=\Z(\sqrt{13})=\{m+n\sqrt{13}\mid m,n\in \Z\}$ and $F=\Q(\sqrt{13})$, the field of fractions. Show the following:
+            
+            \begin{enumerate}
+                \item $x^2+3x-1$ is irreducible in $D[x]$ but not in $F[x]$.
+                \item $D$ is not a unique factorization domain.
+            \end{enumerate}
+
+            %#87
+            \item Let $D$ be an integral domain and $F$ a subring of $D$ that is a field. Show that if each element of $D$ is algebraic over $F$, then $D$ is a field.
+            
+            %#88
+            \item Let $R$ be an integral domain containing the subfield $F$ and assume that $R$ is finite dimensional over $F$ when viewed as a vector space over $F$. Prove that $R$ is a field. 
+            
+            %#89
+            \item Let $D$ be an integral domain.
+            
+            \begin{enumerate}
+                \item For $a,b \in D$ define a \textit{greatest common divisor} of $a$ and $b$.
+                \item For $x\in D$ denote $(x)=\{dx \mid  d\in D\}$. Prove that if $(a)+(b)=(d)$, then $d$ is a greatest common divisor of $a$ and $b$.
+            \end{enumerate}
+
+            %#90
+            \item Let $D$ be a principal ideal domain.
+            
+            \begin{enumerate}
+                \item For $a,b \in D$, define a \textit{least common multiple} of $a$ and $b$.
+                \item Show that $d\in D$ is a least common multiple of $a$ and $b$ if and only if $(a)\cap (b)=(d)$.
+            \end{enumerate}
+
+            %#91
+            \item Let $D$ be a principal ideal domain and let $a,b \in D$.
+            
+            \begin{enumerate}
+                \item Show that there is an element $d\in D$ that satisfies the properties 
+                
+                \begin{enumerate}
+                    \item $d\mid a$ and $d\mid b$ and 
+                    \item if $e\mid a$ and $e\mid b$ then $e\mid d$
+                \end{enumerate}
+
+                \item Show that there is an element $m\in D$ that satisfies the properties
+                
+                \begin{enumerate}
+                    \item $a\mid m$ and $b\mid m$ and 
+                    \item if $a\mid e$ and $b\mid e$ then $m\mid e$.
+                \end{enumerate}
+            \end{enumerate}
+
+            %#92
+            \item Let $R$ be a principal ideal domain. Show that if $(a)$ is a nonzero ideal in $R$, then htere are only finitely many ideals in $R$ containing $(a)$.
+            
+            %#93
+            \item Let $D$ be a unique factorization domain and $F$ its field of fractions. Prove that if $d$ is an irreducible element in $D$, then there are no $x\in F$ such that $x^2=d$.
+            
+            %#94
+            \item Let $D$ be a Euclidean domain. Prove that every non-zero prime ideal is a maximal ideal. 
+            
+            %#95 
+            \item Let $\pi$ be an irreducible element of a principal ideal domain $R$. Prove that $\pi$ is a prime element (that is, $\pi \mid ab$ implies $\pi \mid a$ or $\pi \mid b$).
+            
+            %#96
+            \item Let $D$ with $\phi : D\setminus \{0\} \to \N$ be a Euclidean domain. Suppose $\phi(a+b) \leq \max \{\phi(a),\phi(b)\}$ for all $a,b\in D$. Prove that $D$ is either a field or isomorphic to a polynomial ring over a field.
+            
+            %#97
+            \item Let $D$ be an integral domain and $F$ its field of fractions. Show that if $g$ is an isomorphism of $D$ onto itself, then there is a unique isomorphism $h$ of $F$ onto $F$ such that $h(d)=g(d)$ for all $d\in D$. ($h\mid_D=g$).
+            
+            %#98
+            \item Let $D$ be a unique factorization domain such that if $p$ and $q$ are irreducible elements of $D$, then $p$ and $q$ are associates. Show that if $A$ and $B$ are ideals of $D$, then either $A\subseteq B$ or $B\subseteq A$.
+            
+            %#99
+            \item Let $D$ be a unique factorization domain and $p$ a fixed irreducible element of $D$ such that if $q$ is any irreducible element of $D$, then $q$ is an associate of $p$. Show the following.
+            
+            \begin{enumerate}
+                \item If $d$ is a nonzero element of $D$, then $d$ is uniquely expressible in the form $up^n$, where $u$ is a unit of $D$ and $n$ is a non-negative integer.
+                \item $D$ is a Euclidean domain.
+            \end{enumerate}
+
+            %#100
+            \item Prove that $\Z[\sqrt{-2}]=\{a+b\sqrt{-2} \mid a,b \in \Z\}$ is a Euclidean domain.
+            
+            %#101
+            \item Show that the ring $\Z[i]$ of Gaussian integers is a Euclidean ring and compute the greatest common divisor of $5+i$ and $13$ using the Euclidean algorithm.
+
+        \subsection{Polynomial Rings}
+
+            %#102
+            \item Show that the polynomial $f(x)=x^4+5x^2+3x+2$ is irreducible over the field of rational numbers.
+            
+            %#103
+            \item Let $D$ be an integral domain and $D[x]$ the polynomial ring over $D$. Suppose $\phi : D[x] \to D$ is an isomorphism such that $\phi(d)=d$ for all $d\in D$. Show that $\phi(x)=ax+b$ for some $a,b\in D$ and that $a$ is a unit of $D$.
+            
+            %#104
+            \item Let $f(x)=a_0+a_1x+\hdots +a_kx^k+\hdots +a_nx^n \in \Z[x]$ and $p$ a prime such that $p\mid a_i$ for $i=1,\hdots,k-1$, $p\nmid a_k$, $p\nmid a_n$, and $p^2\nmid a_0$. Show that $f(x)$ has an irreducible factor in $\Z[x]$ of degree at least $k$.
+            
+            %#105
+            \item Let $D$ be an integral domain and $D[x]$ the polynomial ring over $D$ in the indeterminate $x$. Show that if every nonzero prime ideal of $D[x]$ is a maximal ideal, then $D$ is a field.
+            
+            %#106
+            \item Let $R$ be a commutative ring with $1$ and let $f(x)\in R[x]$ be nilpotent. Show that the coefficients of $f$ are nilpotent.
+            
+            %#107
+            \item Show that if $R$ is an integral domain and $f(x)$ is a unit in the polynomial ring $R[x]$, then $f(x)$ is in $R$.
+            
+            %#108
+            \item Let $D$ be a unique factorization domain and $F$ its field of fractions. Prove that if $f(x)$ is a monic polynomial in $D[x]$ and $\alpha \in F$ is a root of $f$, then $\alpha \in D$.
+            
+            %#109
+            \item
+            
+            \begin{enumerate}
+                \item Show that $x^4+x^3+x^2+x+1$ is irreducible in $\Z_3[x]$.
+                \item Show that $x^4+1$ is not irreducible in $\Z_3[x]$.
+            \end{enumerate}
+
+            %#110
+            \item Let $F[x,y]$ be the polynomial ring over a field $F$ in two indeterminates $x,y$. Show that the ideal generated by $\{x,y\}$ is not a principal ideal.
+            
+            %#111
+            \item Let $F$ be a field. Prove that the polynomial ring $F[x]$ is a PID and that $F[x,y]$ is not a PID.
+            
+            %#112
+            \item Let $D$ be an integral domain and let $c$ be an irreducible element in $D$. Show that the ideal $(x,c)$ generated by $x$ and $c$ in the polynomial ring $D[x]$ is not a principal ideal.
+            
+            %#113
+            \item Show that if $R$ is a commutative ring with $1$ that is not a field. then $R[x]$ is not a principal ideal domain.
+            
+            %#114
+            \item
+            
+            \begin{enumerate}
+                \item Let $\Z[\frac{1}{2}]=\set{\frac{a}{2^n} \mid a,n\in \Z, n\geq 0}$, the smallest subring of $\Q$ containing $\Z$ and $\frac{1}{2}$. Let $(2x-1)$ be the ideal of $\Z[x]$ generated by the polynomial $2x-1$. Show that $\Z[x]/(2x-1) \cong \Z[\frac{1}{2}]$.
+                \item Find an ideal $I$ of $\Z[x]$ such that $(2x-1)\subsetneq I \subsetneq \Z[x]$
+            \end{enumerate}
+
+        \subsection{Non-commutative Rings}
+
+            %#115
+            \item Let $R$ be a ring with identity such that the identity map is the only ring automorphism of $R$. Prove that the set $N$ of all nilpotent elements of $R$ is an ideal of $R$.
+            
+            %#116
+            \item Let $p$ be a prime. A ring $S$ is called a \textit{p-ring} if the characteristic of $S$ is a power of $p$. Show that if $R$ is a ring with identity of finite characteristic, then $R$ is isomorphic to a finite direct product of $p$-rings for distinct primes.
+            
+            %#117
+            \item If $R$ is any ring with identity, let $J(R)$ denote the Jacobson radical of $R$. Show that if $e$ is any idempotent of $R$, then $J(eRe)=eJ(R)e$.
+            
+            %#118
+            \item If $n$ is a positive integer and $F$ is any field, let $M_n(F)$ denote the ring of $n\x n$ matrices with entries in $F$. Prove that $M_n(F)$ is a simple ring. Equivalently, $\text{End}_F(V)$ is a simple ring if $V$ is a finite dimensional vector space over $F$.
+            
+            %#119
+            \item Let $R$ be a ring.
+            
+            \begin{enumerate}
+                \item Show that there is a unique smallest (with respect to inclusion) ideal $A$ such that $R/A$ is a commutative ring.
+                \item Give an example of a ring $R$ such that for every proper ideal $I$, $R/I$ is not commutative. Verify your example.
+                \item For the ring $R=\set{\mat{a&b\\0&c} \mid a,b,c\in \Z}$ with the usual matrix operations, find the ideal of $A$ of part (a).
+            \end{enumerate}
+
+            %#120
+            \item A ring $R$ is \textit{nilpotent-free} if $a^n=0$ for $a\in R$ and some positive integer $n$ implies $a=0$.
+            
+            \begin{enumerate}
+                \item Suppose there is an ideal $I$ such that $R/I$ is nilpotent-free. Show there is a unique smallest (with respect to inclusion) ideal $A$ such that $R/A$ is nilpotent-free.
+                \item Give an example of a ring $R$ such that for every proper ideal $I$, $R/I$ is not nilpotent-free. Verify your example.
+                \item Show that if $R$ is a commutative ring with identity, then there is a proper ideal $I$ of $R$ such that $R/I$ is nilpotent-free, and find the ideal $A$ of part (a).
+            \end{enumerate}
+            
+        \subsection{Local Rings, Localization, Rings of Fractions}
+
+            %#121
+            \item Let $R$ be an integral domain. Construct the field of fractions $F$ of $R$ by defining the set $F$ and the two binary operations, and show that the two operations are well-defined. Show that $F$ has a multiplicative identity element and that every nonzero element of $F$ has a multiplicative inverse.
+            
+            %#122
+            \item A \textit{local} ring is a commutative ring with $1$ that has a unique maximal ideal. Show that a ring $R$ is local if and only if the set of non-units in $R$ is an ideal. 
+            
+            %#123 
+            \item Let $R$ be a commutative ring with $1\neq 0$ in which the set of nonunits is closed under addition. Prove that $R$ is local, i.e., has a unique maximal ideal.
+            
+            %#124
+            \item Let $D$ be an integral domain and $F$ its field of fractions. Let $P$ be a prime ideal in $D$ and $D_P=\set{ab^{-1} \mid a,b\in D, b\notin P} \subseteq F$. Show that $D_P$ has a unique maximal ideal.
+            
+            %#125
+            \item Let $R$ he a commutative ring with identity and $M$ a maximal ideal of $R$. Let $R_M$ be the ring of quotients of $R$ with respect ot the multiplicative set $R\setminus M=\set{s\in R \mid s\notin M}$. Show the following.
+            
+            \begin{enumerate}
+                \item $M_M=\set{\frac{a}{s} \mid a\in M, s\notin M}$ is the unique maximal ideal of $R_M$.
+                \item The fields $R/M$ and $R_M/M_M$ are isomorphic.
+            \end{enumerate}
+
+            %#126
+            \item Let $R$ be an integral domain, $S$ a multiplicative set, and let $\inv{S}R=\set{\frac{r}{s} \mid r\in R, s\in S}$ (contained in the field of fractions of $R$). Show that if $P$ is a prime ideal of $R$, then $\inv{S}P$ is either a prime ideal of $\inv{S}R$ or else equals $\inv{S}R$.
+            
+            %#127
+            \item Let $R$ be a commutative ring with identity and $P$ a prime ideal of $R$. Let $R_P$ be the ring of quotients of $R$ with respect to the set $R\setminus P=\set{s\in R \mid s\notin P}$. Show that $R_P/P_P$ is the field of fractions of the integral domain $R/P$.
+            
+            %#128
+            \item Let $D$ be an integral domain and $F$ its field of fractions. Denote by $\mathcal{M}$ the set of all maximal ideals of $D$. For $M\in \mathcal{M}$, let $D_M=\set{\frac{a}{s} \mid a,s\in D, s\notin M}\subset F$. Show that $\bigcap _{M\in \mathcal{M}} D_M=D$.
+            
+            %#129
+            \item Let $R$ be a commutative ring with $1$ and $D$ a multiplicative subset of $R$ containing $1$. Let $J$ be an ideal in the ring of fractions $\inv{D}R$ and let \[I=\set{a\in R \mid \frac{a}{d} \in J \text{ for some } d\in D}.\] Show that $I$ is an ideal of $R$.
+            
+            %#130
+            \item Let $D$ be a principal ideal domain and let $P$ be a non-zero prime ideal. Show that $D_P$, the localization of $D$ at $P$, is a principal ideal domain and has a unique irreducible element, up to associates.
+
+        \subsection{Chains and Chain Conditions}
+
+            %#131
+            \item Let $R$ be a commutative ring with identity. Prove that any non-empty set of prime ideals of $R$ contains maximal \textit{and} minimal elements.
+            
+            %#132
+            \item Let $R$ be a commutative ring with $1$. We say $R$ satisfies the \textit{ascending chain condition} if whenever $I_1 \subseteq I_2 \subseteq I_3 \subseteq \hdots$ is an ascending chain of ideals, there is an integer $N$ such that $I_k=I_N$ for all $k\geq N$. Show that $R$ satisfies the ascending chain condition if and only if every ideal of $R$ is finitely generated. 
+            
+            %#133
+            \item Define \textit{Noetherian ring} and prove that if $R$ is Noetherian, then $R[x]$ is Noetherian.
+            
+            %#134
+            \item Let $R$ be a commutative Noetherian ring with identity. Prove that there are only finitely many \textit{minimal} prime ideals of $R$.
+
+            %#135
+            \item Let $R$ be a commutative Noetherian ring in which every $2$-generated ideal is principal. Prove that $R$ is a Principal Ideal Domain.
+            
+            %#136
+            \item Let $R$ be a commutative Noetherian ring with identity and let $I$ be an ideal in $R$. Let $J=\text{Rad}(I)$. Prove that there exists a positive integer $n$ such that $j^n\in I$ for all $j\in J$.
+            
+            %#137
+            \item Let $R$ be a commutative Noetherian domain with identity. Prove that every nonzero ideal of $R$ conatains a product of nonzero \textit{prime} ideals of $R$.
+            
+            %#138
+            \item Let $R$ be a ring satisfying the \textit{descending chain condition} on right ideals. If $J(R)$ denotes the Jacobson radical of $R$, prove that $J(R)$ is nilpotent.
+            
+            %#139
+            \item Show that if $R$ is a commutative Noetherian ring with identity, then the polynomial ring $R[x]$ is also Noetherian.
+            
+            %#140
+            \item Let $P$ be a nonzero prime ideal of the commutative Noetherian domain $R$. Assume $P$ is principal. Prove that there does not exist a prime ideal $Q$ satisfying $(0)<Q<P$.
+            
+            %#141
+            \item Let $R$ be a commutative Noetherian ring. Prove that every nonzero ideal $A$ of $R$ contains a product of prime ideals (not necessarily distinct) each of which contains $A$.
+            
+            %#142
+            \item Let $R$ be a commutative ring with $1$ and let $M$ be an $R$-module that is not Artinian (Noetherian, of finite composition length). Let $\mathcal{I}$ be the set of ideals $I$ of $R$ such that there exists and $R$-submodule $N$ of $M$ with the property that $N/NI$ is not Artinian (Noetherian, of finite composition length, respectively). Show that if $A\in \mathcal{I}$ is a maximal element of $\mathcal{I}$, then $A$ is a prime ideal of $R$.
+            
+            
+
+    
+\end{enumerate}
+
+\end{document}
