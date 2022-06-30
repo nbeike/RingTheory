@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1656526714 "/Users/nbeike/Desktop/Coding/RingTheory/RingTheory.tex" "RingTheory.pdf" "RingTheory" 1656526715
-  "/Users/nbeike/Desktop/Coding/RingTheory/RingTheory.tex" 1656526712 59217 cb4eacc38f498f15b62f9909b9f8a8dd ""
+["pdflatex"] 1656529172 "/Users/nbeike/Desktop/Coding/RingTheory/RingTheory.tex" "RingTheory.pdf" "RingTheory" 1656529173
+  "/Users/nbeike/Desktop/Coding/RingTheory/RingTheory.tex" 1656529171 59747 1e0a174328ca9eb262391f360adac980 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -195,9 +195,9 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1655259167 2826444 270d1a83f4b16b52dae49df202041734 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "RingTheory.aux" 1656526714 1068 f4b9ec9aafd1bd20079467ca22b1893e "pdflatex"
-  "RingTheory.tex" 1656526712 59217 cb4eacc38f498f15b62f9909b9f8a8dd ""
-  "RingTheory.toc" 1656526714 666 8646be386f8c156a726939fecc076281 "pdflatex"
+  "RingTheory.aux" 1656529173 1068 f4b9ec9aafd1bd20079467ca22b1893e "pdflatex"
+  "RingTheory.tex" 1656529171 59747 1e0a174328ca9eb262391f360adac980 ""
+  "RingTheory.toc" 1656529173 666 8646be386f8c156a726939fecc076281 "pdflatex"
   (generated)
   "RingTheory.aux"
   "RingTheory.log"

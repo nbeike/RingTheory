@@ -283,8 +283,8 @@
             \begin{proof}
                 \begin{enumerate}
                     \item multiply on the left by $a$
-                    \item $-x_1a=-x_2a \longrightarrow -x_1ab=-x_2ab \longrightarrow x_1=x_2$
-                    \item Suppose that $X$ is finite. Then $\phi$ is a bijection. So there exists some $x$ such that $b=b+1-xa \longrightarrow xa=1$. Then $x=xab=b$. Now take the other element in the set say $y\neq x$. Then $x=xay=y$. Which is a contradiction.
+                    \item $-x_1a=-x_2a \Rightarrow -x_1ab=-x_2ab \Rightarrow x_1=x_2$
+                    \item Suppose that $X$ is finite. Then $\phi$ is a bijection. So there exists some $x$ such that $b=b+1-xa \Rightarrow xa=1$. Then $x=xab=b$. Now take the other element in the set say $y\neq x$. Then $x=xay=y$. Which is a contradiction.
                 \end{enumerate}
             \end{proof}
 
@@ -302,23 +302,35 @@
             \item Let $R$ be the ring of all $2\times 2$ matrices of the form $\mat{a &b\\-b&a}$ where $a$ and $b$ are real numbers. Prove that $R$ is isomorphic to $\C$, the field of complex numbers.
             
             \begin{proof}
-                
+                Let $\mathcal{M}$ be our set of matrices. Then define $\phi:\mathcal{M}\to \C$ by $\phi(M)=a+bi$. Then show that this is a ring isomorphism.
             \end{proof}
 
             %#27
             \item Let $p$ be a prime and let $R$ be the ring of all $2\times 2$ matrices of the form $\mat{a&b\\pb&a}$, where $a,b\in \Z$. Prove that $R$ is isomorphic to $\Z[\sqrt{p}]$.
             
+            \begin{proof}
+                Let $\mathcal{M}$ be the set of matrices. Define $\phi:\mathcal{M}\to \Z[\sqrt{p}]$ by $\phi(M)=a+b\sqrt(P)$.
+            \end{proof}
+
             %# 28
             \item Let $p$ be a prime and $F_p$ the set of all $2\x 2$ matrices of the form $\mat{a&b\\-b&a}$, where $a,b\in \Z_p$.
             
             \begin{enumerate}
                 \item Show that $F_p$ is a commutative ring with identity.
-                \item SHow that $F_7$ is a field.
+                \item Show that $F_7$ is a field.
                 \item Show that $F_{13}$ is not a field.
             \end{enumerate}
 
+            \begin{proof}
+                \begin{enumerate}
+                    \item trivial
+                    \item .
+                    \item note that $2^2+3^2=13$
+                \end{enumerate}
+            \end{proof}
+
             %#29
-            \item Let $I\subseteq J$ be right ideals of a ring $R$ such that $J/I \equiv R$ as right $R$-modules. Prove that there exists a right ideal $K$ such that $I\cap K=(0)$ and $I+K=J$.
+            \item Let $I\subseteq J$ be right ideals of a ring $R$ such that $J/I \cong R$ as right $R$-modules. Prove that there exists a right ideal $K$ such that $I\cap K=(0)$ and $I+K=J$.
             
             %#30
             \item A ring $R$ is called simple if $R^2 \neq 0$ and $0$ and $R$ are its only ideals. Show that the center of a simple ring is $0$ or a field. 
@@ -393,7 +405,7 @@
             \begin{proof}
                 For (a) since $M$ is a maximal ideal then $R/M$ is a field and thus an integral domain. Since $R/M$ is an integral domain, then $M$ is a prime ideal of $R$.
 
-                For (b) note that $\Z[x]/(x) \equiv \Z$ so $(x)$ is a prime ideal of $\Z[x]$ but $(x)$ is not maximal in $\Z[x]$ since $\Z$ is not a field.
+                For (b) note that $\Z[x]/(x) \cong \Z$ so $(x)$ is a prime ideal of $\Z[x]$ but $(x)$ is not maximal in $\Z[x]$ since $\Z$ is not a field.
             \end{proof}
             
             %#42
@@ -436,7 +448,7 @@
                 \end{enumerate}
             
             \begin{proof}
-                Note that $(x)$ is an ideal of $R[x]$ and $R[x]/(x) \equiv R$. Then (a) and (b) follow trivially.
+                Note that $(x)$ is an ideal of $R[x]$ and $R[x]/(x) \cong R$. Then (a) and (b) follow trivially.
             \end{proof}
 
             %#48
